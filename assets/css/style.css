@@ -32,6 +32,8 @@ header {
     position: fixed;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
 }
 
 header a {
@@ -46,6 +48,7 @@ header a {
     list-style-type: none;
     letter-spacing: 2px;
     font-size: 110%;
+    align-items: right;
 }
 
 #menu>li {
@@ -54,6 +57,7 @@ header a {
 
 .active {
     border-bottom: 1px solid #3a3a3a;
+    width: fit-content;
 }
 
 nav {
@@ -83,9 +87,50 @@ main {
     background-color: lightblue;
     /* Pushing the footer down and allowing the main content to take all the space on the page */
     flex: 1 0 auto;
-    margin-top: 47px;
+    margin-top: 85px;
 }
 
 footer {
     background-color: orange;
+}
+
+/* Media query: tablets and larger */
+@media screen and (min-width 768px) {
+
+    nav {
+        display: block;
+        position: relative;
+        box-shadow: none;
+        padding-right: 1em;
+        width: fit-content
+    }
+
+    #menu {
+        display: flex;
+    }
+
+    #menu>li {
+        padding-left: 1rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 300%;
+        padding-top: 120px;
+        margin: 0 0.5rem;
+    }
+
+    main {
+        margin-top: 80px;
+    }
+}
+
+media screen and (min-width 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+        width: fit-content;
+    }
 }
