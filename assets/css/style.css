@@ -33,14 +33,57 @@ header {
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
 }
+
 header a {
     text-decoration: none;
     color: inherit;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
 }
+
+#menu {
+    list-style-type: none;
+    letter-spacing: 2px;
+    font-size: 110%;
+}
+
+#menu>li {
+    margin-bottom: 1em;
+}
+
+.active {
+    border-bottom: 1px solid #3a3a3a;
+}
+
+nav {
+    position: absolute;
+    background-color: #ffffff;
+    left: 0;
+    width: 100%;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+#nav-toggle:checked~nav {
+    display: block;
+}
+
 main {
     background-color: lightblue;
     /* Pushing the footer down and allowing the main content to take all the space on the page */
     flex: 1 0 auto;
+    margin-top: 47px;
 }
 
 footer {
